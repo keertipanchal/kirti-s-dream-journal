@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -43,6 +43,7 @@
     --calm: 200 50% 75%;
     --font-display: 'Quicksand', sans-serif;
     --font-body: 'Nunito', sans-serif;
+    --font-handwriting: 'Caveat', cursive;
   }
 
   /* Night Theme */
@@ -171,6 +172,9 @@
 }
 
 @layer utilities {
+  .font-handwriting {
+    font-family: var(--font-handwriting);
+  }
   .gradient-primary {
     background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
   }

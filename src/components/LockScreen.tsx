@@ -66,7 +66,7 @@ const LockScreen = ({ onUnlock }: LockScreenProps) => {
           </div>
         </motion.div>
 
-        <h1 className="text-2xl font-display font-bold mb-1">Kirti's World</h1>
+        <h1 className="text-2xl font-handwriting font-bold mb-1">Keerti's Dream Journal</h1>
         <div className="flex items-center justify-center gap-1 mb-6">
           <Sparkles className="w-4 h-4 text-primary" />
           <p className="text-sm text-muted-foreground">
