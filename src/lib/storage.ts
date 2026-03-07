@@ -1,4 +1,4 @@
-/* LocalStorage helper utilities for Kirti's World */
+/* LocalStorage helper utilities for Keerti's Dream Journal */
 
 export interface Entry {
   id: string;
@@ -71,36 +71,36 @@ export function toggleFavorite(key: string, id: string): void {
 
 export function getDiaryEntries(): DiaryEntry[] {
   try {
-    return JSON.parse(localStorage.getItem("kirti-diary") || "[]");
+    return JSON.parse(localStorage.getItem("keerti-diary") || "[]");
   } catch {
     return [];
   }
 }
 
 export function saveDiaryEntries(entries: DiaryEntry[]): void {
-  localStorage.setItem("kirti-diary", JSON.stringify(entries));
+  localStorage.setItem("keerti-diary", JSON.stringify(entries));
 }
 
 export function getTheme(): string {
-  return localStorage.getItem("kirti-theme") || "pink";
+  return localStorage.getItem("keerti-theme") || "pink";
 }
 
 export function setTheme(theme: string): void {
-  localStorage.setItem("kirti-theme", theme);
+  localStorage.setItem("keerti-theme", theme);
 }
 
 export function getPassword(): string | null {
-  return localStorage.getItem("kirti-password");
+  return localStorage.getItem("keerti-password");
 }
 
 export function setPassword(password: string): void {
-  localStorage.setItem("kirti-password", password);
+  localStorage.setItem("keerti-password", password);
 }
 
 export function isLocked(): boolean {
-  return sessionStorage.getItem("kirti-unlocked") !== "true";
+  return sessionStorage.getItem("keerti-unlocked") !== "true";
 }
 
 export function unlock(): void {
-  sessionStorage.setItem("kirti-unlocked", "true");
+  sessionStorage.setItem("keerti-unlocked", "true");
 }

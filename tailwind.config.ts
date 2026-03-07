@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         display: ["Quicksand", "sans-serif"],
         body: ["Nunito", "sans-serif"],
+        handwriting: ["Caveat", "cursive"],
       },
       colors: {
         border: "hsl(var(--border))",

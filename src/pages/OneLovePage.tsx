@@ -8,11 +8,11 @@ const OneLovePage = () => {
   const [editVal, setEditVal] = useState("");
 
   useEffect(() => {
-    setText(localStorage.getItem("kirti-one-love") || "");
+    setText(localStorage.getItem("keerti-one-love") || "");
   }, []);
 
   const save = () => {
-    localStorage.setItem("kirti-one-love", editVal);
+    localStorage.setItem("keerti-one-love", editVal);
     setText(editVal);
     setEditing(false);
   };
@@ -21,7 +21,7 @@ const OneLovePage = () => {
     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
       <div className="flex items-center gap-2">
         <span className="text-2xl">⭐</span>
-        <h2 className="text-2xl font-display font-bold">The One Thing I Love Most</h2>
+        <h2 className="text-2xl font-handwriting font-bold">The One Thing I Love Most</h2>
       </div>
 
       <div className="glass-card rounded-2xl p-8 text-center soft-shadow glow-shadow">
@@ -34,7 +34,7 @@ const OneLovePage = () => {
             <textarea
               value={editVal}
               onChange={(e) => setEditVal(e.target.value)}
-              className="w-full p-3 bg-muted/50 border border-border rounded-xl text-center font-display text-lg focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
+              className="w-full p-3 bg-muted/50 border border-border rounded-xl text-center font-handwriting text-lg focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
               rows={3}
               autoFocus
               placeholder="What's the one thing you love most in the world?"
@@ -46,7 +46,7 @@ const OneLovePage = () => {
         ) : (
           <div>
             {text ? (
-              <p className="text-xl font-display font-bold gradient-text leading-relaxed">{text}</p>
+              <p className="text-xl font-handwriting font-bold gradient-text leading-relaxed">{text}</p>
             ) : (
               <p className="text-muted-foreground font-body">Click edit to add your most loved thing ✨</p>
             )}
